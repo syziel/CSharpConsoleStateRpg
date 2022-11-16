@@ -1,6 +1,4 @@
-﻿using CSharpConsoleStateRpg.GUI;
-
-namespace CSharpConsoleStateRpg.States
+﻿namespace CSharpConsoleStateRpg.States
 {
 	class StateCharacterCreator
 		: State
@@ -19,7 +17,7 @@ namespace CSharpConsoleStateRpg.States
 
 					this.end = true;
 
-					break ;
+		 			break ;
 			}
 		}
 

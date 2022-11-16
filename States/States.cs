@@ -1,10 +1,11 @@
 ﻿
-
 namespace CSharpConsoleStateRpg.States
 {
     class State
     {
         protected Stack<State> states;
+
+
         protected bool end = false;
 
 

@@ -1,7 +1,4 @@
-﻿using CSharpConsoleStateRpg.GUI;
-
-
-namespace CSharpConsoleStateRpg.States
+﻿namespace CSharpConsoleStateRpg.States
 {
 	class GameState
 		: State

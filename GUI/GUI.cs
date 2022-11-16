@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CSharpConsoleStateRpg.GUI
+﻿namespace CSharpConsoleStateRpg.GUI
 {
 	class Gui
 	{
