@@ -1,4 +1,8 @@
-﻿namespace CSharpConsoleStateRpg.States
+﻿
+
+using CSharpConsoleStateRpg.GUI;
+
+namespace CSharpConsoleStateRpg.States
 {
 	class StateMainMenu
 		: State
