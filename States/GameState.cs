@@ -1,12 +1,15 @@
-﻿using CSharpConsoleStateRpg.GUI;
+ using System.Collections;
+ using CSharpConsoleStateRpg.GUI;
+ using CSharpConsoleStateRpg.States;
 
-namespace CSharpConsoleStateRpg.States
+ namespace CSharpConsoleStateRpg
 {
 	class GameState
 		: State
 	{
+		ArrayList characterList;
 
-		public GameState(Stack<State> States)
+		public GameState(Stack<State> States, ArrayList characterList)
 			: base(States)
 		{
 
@@ -35,7 +38,7 @@ namespace CSharpConsoleStateRpg.States
 
 
 
-			this.ProcessInput ( input ) ;
+			this.ProcessInput(input);
 
 
 

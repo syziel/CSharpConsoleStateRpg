@@ -1,4 +1,6 @@
-﻿namespace CSharpConsoleStateRpg.GUI
+
+
+namespace CSharpConsoleStateRpg.GUI
 {
 	class Gui
 	{
@@ -15,7 +17,8 @@
 
 			return str;
 		}
-			public static String MenuOption(int option, String str)
+
+		public static String MenuOption(int option, String str)
 		{
 			str = String.Format(" - ({0}) : {1}\n", option, str);
 
@@ -24,9 +27,11 @@
 
 		public static String GetInput(String str)
 		{
-			str = String.Format("- {0}: ", str);
+			str = String.Format(" -{0}: ", str);
 
 			return str;
+
 		}
+
 	}
 }

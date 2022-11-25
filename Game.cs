@@ -1,4 +1,5 @@
-﻿using CSharpConsoleStateRpg.States;
+﻿using System.Collections;
+using CSharpConsoleStateRpg.States;
 
 namespace CSharpConsoleStateRpg
 {
@@ -14,11 +15,9 @@ namespace CSharpConsoleStateRpg
 			set { this.end = value; }
 		}
 
-
 		private Stack<States.State> states;
+		private ArrayList characterList;
 
-
-		//Constructors and Destructors
 
 		//Constructors and Destructor
 
@@ -29,17 +28,24 @@ namespace CSharpConsoleStateRpg
 
 		}
 
+		private void InitVariables()
+
+		{ this.end = false; }
+
+		private void InitCharacterList()
+		{
+			this.characterList = new ArrayList();
+		}
+
 		private void InitStates()
 		{
-			this.states = new Stack<States.State>();
 
 			//Push first state
-			this.states.Push(new StateMainMenu(this.states));
+			this.states.Push(new StateMainMenu(this.states, this.characterList));
 		}
 
 		//private functions
-		private void InitVariables()
-		{ this.end = false; }
+
 
 		public void Run()
 		{

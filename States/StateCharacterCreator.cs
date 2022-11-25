@@ -1,11 +1,20 @@
-﻿namespace CSharpConsoleStateRpg.States
+﻿using System.Collections;
+
+using CSharpConsoleStateRpg.GUI;
+using CSharpConsoleStateRpg.States;
+
+
+namespace CSharpConsoleStateRpg
 {
 	class StateCharacterCreator
 		: State
 	{
-		public StateCharacterCreator(Stack<State> states)
+		ArrayList characterList;
+
+		public StateCharacterCreator(Stack<State> states, ArrayList characterList)
 			: base(states)
 		{
+			this.characterList = characterList;
 
 		}
 
@@ -18,6 +27,12 @@
 					this.end = true;
 
 		 			break ;
+
+				case 2:
+					this.states.Push(new StateCharacterCreator(this.states, this.characterList));
+					break;
+				default:
+					break;
 			}
 		}
 
