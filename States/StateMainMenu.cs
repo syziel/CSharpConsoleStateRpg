@@ -31,6 +31,9 @@ namespace CSharpConsoleStateRpg
 				case 2:
 					this.states.Push(new StateCharacterCreator(this.states, this.characterList));
 					break;
+				case 3:
+					Console.Write(this.characterList.Count);
+					break;
 				default:
 
 					break;
@@ -41,11 +44,12 @@ namespace CSharpConsoleStateRpg
 		public override void Update()
 		{
 
-			Console.Write(Gui.MenuTitle("Main Menu"));
+			Gui.MenuTitle("Main Menu");
 
-			Console.Write(Gui.MenuOption(1, "New Game"));
-			Console.Write(Gui.MenuOption(2, "Character Creator"));
-			Console.Write(Gui.MenuOption(-1, "Exit"));
+			Gui.MenuOption(1, "New Game");
+			Gui.MenuOption(2, "Character Creator");
+			Gui.MenuOption(2, "List Characters");
+			Gui.MenuOption(-1, "Exit");
 
 			Gui.GetInput("Input");
 			int input = Convert.ToInt32(Console.ReadLine());

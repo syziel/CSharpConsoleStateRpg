@@ -24,6 +24,7 @@ namespace CSharpConsoleStateRpg
 		public Game()
 		{
 			this.InitVariables();
+			this.InitCharacterList();
 			this.InitStates();
 
 		}

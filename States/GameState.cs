@@ -28,9 +28,9 @@
 		}
 		public override void Update()
 		{
-			Console.WriteLine(Gui.MenuTitle("Game State"));
-			Console.WriteLine(Gui.MenuOption(1, "Character Creator"));
-			Console.WriteLine(Gui.MenuOption(-1, "Exit"));
+			Gui.MenuTitle("Game State");
+			Gui.MenuOption(1, "Character Creator");
+			Gui.MenuOption(-1, "Exit");
 
 
 			Gui.GetInput("Input");
