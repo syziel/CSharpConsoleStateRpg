@@ -40,7 +40,30 @@ namespace CSharpConsoleStateRpg.GUI
 		{
 			str = String.Format(" -{0}: ", str);
 
-			Console.Write(str); 
+			Console.Write(str);
+
+		}
+
+		public static int GetInputInt(String message)
+		{
+			int input = -10;
+
+
+			while (input == -10);
+			{
+				try
+				{
+					Gui.GetInput("Input");
+					input = Convert.ToInt32(Console.ReadLine());
+				}
+				catch (Exception e)//Error
+				{
+					input = -10;
+					Console.WriteLine(e.Message);
+				}
+			}
+
+			return input;
 
 		}
 

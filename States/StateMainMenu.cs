@@ -27,12 +27,15 @@ namespace CSharpConsoleStateRpg
 					this.end = true;
 
 					break;
+				case 1:
+					this.StartNewGame();
+					break;
 
 				case 2:
 					this.states.Push(new StateCharacterCreator(this.states, this.characterList));
 					break;
 				case 3:
-					Console.Write(this.characterList.Count);
+					this.SelectCharacter();
 					break;
 				default:
 
@@ -48,14 +51,27 @@ namespace CSharpConsoleStateRpg
 
 			Gui.MenuOption(1, "New Game");
 			Gui.MenuOption(2, "Character Creator");
-			Gui.MenuOption(2, "List Characters");
+			Gui.MenuOption(3, "Select Characters");
 			Gui.MenuOption(-1, "Exit");
 
-			Gui.GetInput("Input");
-			int input = Convert.ToInt32(Console.ReadLine());
+			int input = Gui.GetInputInt("Input");
 
 
 			this.ProcessInput(input);
+
+		}
+
+		public void StartNewGame()
+		{
+
+		}
+
+		public void SelectCharacter()
+		{
+			foreach (var character in this.characterList)
+			{
+				Console.WriteLine(character.ToString());
+			}
 
 		}
 
